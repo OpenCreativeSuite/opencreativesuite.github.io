@@ -1,8 +1,8 @@
-# Open Creative Suite — website
+# Open Creative Suite website
 
 The static product site for **Open Creative Suite**: [PixelDotNet](https://github.com/OpenCreativeSuite/PixelDotNet) and [VectorDotNet](https://github.com/OpenCreativeSuite/VectorDotNet).
 
-No frameworks, no bundler and no runtime dependencies. Product pages, sitemap and metadata are generated from one file — `content.json` — into plain HTML, with a shared CSS/JS layer.
+No frameworks, no bundler and no runtime dependencies. Product pages, sitemap and metadata are generated from one file (`content.json`) into plain HTML, with a shared CSS/JS layer.
 
 ## Preview locally
 
@@ -38,13 +38,13 @@ Key fields:
 3. Put screenshots in `assets/img/apps/<slug>/`. They are normally copied from the product repo's `docs/screenshots/` folder.
 4. Run `node scripts/build.mjs`.
 
-The build writes `index.html`, `about.html`, `404.html`, `apps/<slug>/index.html`, `sitemap.xml` and `robots.txt`. **Do not edit those generated files by hand** — change the templates in `scripts/build.mjs` or the data in `content.json` and rebuild.
+The build writes `index.html`, `about.html`, `404.html`, `apps/<slug>/index.html`, `sitemap.xml` and `robots.txt`. **Do not edit those generated files by hand.** Change the templates in `scripts/build.mjs` or the data in `content.json` and rebuild.
 
 The site adapts to any number of products: home cards, hero tiles, the receipt, “previous / next” links and the suite index all derive from `content.json`.
 
 ## Deploying to GitHub Pages
 
-1. Set `site.url` in `content.json` to the final site URL. If the site lives at a project path such as `https://example.github.io/opencreativesuite/`, include that path — it is used for canonical URLs, social cards, the sitemap and the 404 page.
+1. Set `site.url` in `content.json` to the final site URL. If the site lives at a project path such as `https://example.github.io/opencreativesuite/`, include that path. It is used for canonical URLs, social cards, the sitemap and the 404 page.
 2. Update `site.github`, `site.community` and `site.licenseUrl` to the real organisation.
 3. Push the repository.
 4. In **Settings → Pages → Build and deployment**, choose **GitHub Actions**. The included workflow (`.github/workflows/pages.yml`) builds the site and publishes it. Alternatively choose “Deploy from a branch” and serve the repository root; `.nojekyll` is already present.

@@ -47,7 +47,7 @@
           {
             "file": "paint.png",
             "label": "Painting",
-            "caption": "Brushes, shapes, gradients and editable paths — all on their own layers."
+            "caption": "Brushes, shapes, gradients and editable paths, all on their own layers."
           },
           {
             "file": "quickselect.png",
@@ -68,7 +68,7 @@
         },
         {
           "title": "Retouch the mess",
-          "body": "Clone Stamp, Healing Brush, Dodge and Burn, Content-Aware Fill, perspective and mesh warp — the everyday repair kit."
+          "body": "Clone Stamp, Healing Brush, Dodge and Burn, Content-Aware Fill, perspective and mesh warp: the everyday repair kit."
         },
         {
           "title": "Cut it out clean",
@@ -146,7 +146,7 @@
           {
             "file": "fonts.png",
             "label": "Typography",
-            "caption": "Every installed family, previewed in its own face — plus your own font files at runtime."
+            "caption": "Every installed family, previewed in its own face, plus your own font files at runtime."
           }
         ]
       },
@@ -161,7 +161,7 @@
         },
         {
           "title": "Snap to anything",
-          "body": "Smart guides for object edges and centres, artboards, the grid and dragged ruler guides — with Shift to constrain."
+          "body": "Smart guides for object edges and centres, artboards, the grid and dragged ruler guides, with Shift to constrain."
         },
         {
           "title": "Documents, organised",

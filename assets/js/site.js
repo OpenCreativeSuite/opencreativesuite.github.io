@@ -1,4 +1,4 @@
-/* Open Creative Suite — site behaviour */
+/* Open Creative Suite: site behaviour */
 (function () {
   "use strict";
 

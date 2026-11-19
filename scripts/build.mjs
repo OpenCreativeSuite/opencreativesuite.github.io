@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Open Creative Suite — static site builder
+   Open Creative Suite: static site builder
    Zero dependencies. Run: node scripts/build.mjs
    ========================================================================== */
 
@@ -595,7 +595,7 @@ function pageShell({
   <meta property="og:image" content="${siteUrl}/assets/img/og.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="${esc(site.name)} — free creative tools, source-available">
+  <meta property="og:image:alt" content="${esc(site.name)}: free creative tools, source-available">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="${esc(title)}">
   <meta name="twitter:description" content="${esc(description)}">
@@ -677,12 +677,12 @@ function homePage() {
   <section class="hero">
     <div class="wrap hero__grid">
       <div>
-        <p class="eyebrow hero__eyebrow">Open Creative Suite — est. ${site.founded}</p>
+        <p class="eyebrow hero__eyebrow">Open Creative Suite / est. ${site.founded}</p>
         <h1>
           <span class="line">Pro-grade.</span>
           <span class="line"><span class="mark">Zero</span> <span class="scribble">bills.<svg viewBox="0 0 300 18" preserveAspectRatio="none" aria-hidden="true"><path d="M3 12C60 3 120 16 180 8S260 4 297 10" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="square"/></svg></span></span>
         </h1>
-        <p class="hero__sub">${countWord(products.length)} serious creative ${products.length === 1 ? "tool" : "tools"} for ${categoryList()}. No subscriptions, no seat limits, no watermarks. Download once — own it forever.</p>
+        <p class="hero__sub">${countWord(products.length)} serious creative ${products.length === 1 ? "tool" : "tools"} for ${categoryList()}. No subscriptions, no seat limits, no watermarks. Download once. Own it forever.</p>
         <div class="btn-row">
           <a class="btn btn--lime" href="#suite">Browse the suite ${icon("arrow")}</a>
           <a class="btn btn--outline" href="${site.github}" target="_blank" rel="noopener">${icon("github")} Star on GitHub</a>
@@ -719,7 +719,7 @@ function homePage() {
   <section class="section" id="suite" data-section="suite">
     <div class="wrap">
       <div class="sec-head">
-        <p class="eyebrow sec-head__eyebrow">01 — The suite</p>
+        <p class="eyebrow sec-head__eyebrow">01 / The suite</p>
         <h2>${countWord(products.length)} ${products.length === 1 ? "tool" : "tools"}.<br>No invoice.</h2>
         <p class="lede">${cap(categoryList())}${products.length < 6 ? ", with more on the way" : ""}. One shared design language, one honest price, every tool included.</p>
       </div>
@@ -730,13 +730,13 @@ function homePage() {
   <section class="section section--dark" id="why" data-section="why">
     <div class="wrap split">
       <div class="reveal">
-        <p class="eyebrow" style="margin-bottom:18px">02 — The deal</p>
+        <p class="eyebrow" style="margin-bottom:18px">02 / The deal</p>
         <h2 style="font-size:clamp(38px,4.8vw,64px);text-transform:uppercase;line-height:.92;margin-bottom:20px">We're not renting<br>you software.</h2>
         <p class="lede" style="margin-bottom:10px">The creative industry runs on subscriptions that expire the moment you stop paying. We think that's a strange way to treat the things you make.</p>
         <div class="principles">
           <div class="principle">
             <span class="principle__num">01</span>
-            <div><h3>Free is the feature</h3><p>No trials, no tiers, no “pro” upsell hiding the export button. Every tool is fully featured on day one — because the work is the point.</p></div>
+            <div><h3>Free is the feature</h3><p>No trials, no tiers, no “pro” upsell hiding the export button. Every tool is fully featured on day one, because the work is the point.</p></div>
           </div>
           <div class="principle">
             <span class="principle__num">02</span>
@@ -744,11 +744,11 @@ function homePage() {
           </div>
           <div class="principle">
             <span class="principle__num">03</span>
-            <div><h3>Source in the open</h3><p>Apache 2.0 with the Commons Clause. Read the code, audit it, fork it for yourself — just don't resell it. The roadmap lives in public.</p></div>
+            <div><h3>Source in the open</h3><p>Apache 2.0 with the Commons Clause. Read the code, audit it, fork it for yourself, but don't resell it. The roadmap lives in public.</p></div>
           </div>
           <div class="principle">
             <span class="principle__num">04</span>
-            <div><h3>No account. No telemetry.</h3><p>Download and work offline. We don't know who you are, what you're making, or how many machines you're on — and we're keeping it that way.</p></div>
+            <div><h3>No account. No telemetry.</h3><p>Download and work offline. We don't know who you are, what you're making, or how many machines you're on. We're keeping it that way.</p></div>
           </div>
         </div>
       </div>
@@ -773,9 +773,9 @@ function homePage() {
   <section class="section" id="source" data-section="source">
     <div class="wrap oss-grid">
       <div class="reveal">
-        <p class="eyebrow" style="margin-bottom:18px">03 — The source</p>
+        <p class="eyebrow" style="margin-bottom:18px">03 / The source</p>
         <h2>The source<br>is the spec.</h2>
-        <p class="lede">Every app is built in public. Read it, audit it, fork it for your own use — just don't resell the software. If we ever go strange, the source stays with you.</p>
+        <p class="lede">Every app is built in public. Read it, audit it, fork it for your own use, but don't resell the software. If we ever go strange, the source stays with you.</p>
         <div class="license-row">
           <span class="chip-tag">Apache 2.0 + Commons Clause</span>
           <span class="chip-tag">No CLA</span>
@@ -792,7 +792,7 @@ function homePage() {
         <div class="code-panel">
           <div class="code-panel__bar">
             <span class="code-panel__dots" aria-hidden="true"><i></i><i></i><i></i></span>
-            <span>bash — build from source</span>
+            <span>bash / build from source</span>
             <button class="copy-btn" type="button" data-copy="clone-code">Copy</button>
           </div>
           <pre id="clone-code"><code>${cloneSnippet}
@@ -839,7 +839,7 @@ function homePage() {
   });
 
   return pageShell({
-    title: `${site.name} — professional creative tools, free forever`,
+    title: `${site.name}: professional creative tools, free forever`,
     description: site.description,
     path: "/",
     base: "./",
@@ -870,7 +870,7 @@ function appPage(p, index) {
       const image = p.images && p.images.shots && p.images.shots[i];
       let frame;
       if (image) {
-        frame = `<img class="app-shot" src="${imageSrc(base, p, image.file)}" alt="${esc(image.alt || `${p.name} — ${shot.label}`)}" width="${
+        frame = `<img class="app-shot" src="${imageSrc(base, p, image.file)}" alt="${esc(image.alt || `${p.name}: ${shot.label}`)}" width="${
           p.shotWidth || 1440
         }" height="${p.shotHeight || 900}" loading="lazy" decoding="async">`;
       } else if (i === 1) {
@@ -961,7 +961,7 @@ function appPage(p, index) {
       </div>
       <div class="mock-frame">
         ${heroVisual(p, base)}
-        <div class="mock-frame__label"><span>${esc(p.name)} ${esc(p.version)} — workspace</span><span>Free · Source-available</span></div>
+        <div class="mock-frame__label"><span>${esc(p.name)} ${esc(p.version)} / workspace</span><span>Free · Source-available</span></div>
       </div>
     </div>
   </section>
@@ -981,7 +981,7 @@ function appPage(p, index) {
   <section class="section">
     <div class="wrap">
       <div class="sec-head">
-        <p class="eyebrow sec-head__eyebrow">01 — Inside ${esc(p.name)}</p>
+        <p class="eyebrow sec-head__eyebrow">01 / Inside ${esc(p.name)}</p>
         <h2>What you<br>get.</h2>
         <p class="lede">Every feature ships in the free build. No pro tier, no unlock key, no “contact sales” for the thing you actually need.</p>
       </div>
@@ -992,7 +992,7 @@ function appPage(p, index) {
   <section class="section section--paper2">
     <div class="wrap">
       <div class="sec-head">
-        <p class="eyebrow sec-head__eyebrow">02 — A look inside</p>
+        <p class="eyebrow sec-head__eyebrow">02 / A look inside</p>
         <h2>The workspace.</h2>
         <p class="lede">Fast, quiet and built around the work. Dark interface, honest controls, and a canvas that gets out of the way.</p>
       </div>
@@ -1003,7 +1003,7 @@ function appPage(p, index) {
   <section class="section section--tight">
     <div class="wrap">
       <div class="sec-head">
-        <p class="eyebrow sec-head__eyebrow">03 — The fine print</p>
+        <p class="eyebrow sec-head__eyebrow">03 / The fine print</p>
         <h2>Specs.</h2>
         <p class="lede">No surprises in the small type. Here is exactly what you are downloading.</p>
       </div>
@@ -1017,7 +1017,7 @@ function appPage(p, index) {
         <div class="get-panel__in">
           <span class="eyebrow">Free forever</span>
           <h2>Get <span>${esc(p.name)}</span>.</h2>
-          <p>Download the latest release straight from GitHub. No account, no email, no trial timer — just the app and the source.</p>
+          <p>Download the latest release straight from GitHub. No account, no email, no trial timer. Just the app and the source.</p>
           <div class="get-panel__actions">
             ${p.platforms
               .map(
@@ -1081,7 +1081,7 @@ function appPage(p, index) {
   });
 
   return pageShell({
-    title: `${p.name} — ${p.category} | ${site.name}`,
+    title: `${p.name} | ${p.category} | ${site.name}`,
     description: `${p.tagline} ${p.blurb} Free forever, source-available, no account required.`,
     path: canonicalPath,
     base,
@@ -1106,7 +1106,7 @@ function aboutPage() {
     },
     {
       q: "Can I use it commercially?",
-      a: "Yes — client work, studio work, internal company work, anything. There is no licence fee and no per-seat charge. The artwork you make is yours, with no attribution requirement."
+      a: "Yes: client work, studio work, internal company work, anything. There is no licence fee and no per-seat charge. The artwork you make is yours, with no attribution requirement."
     },
     {
       q: "Can I resell the software?",
@@ -1118,11 +1118,11 @@ function aboutPage() {
     },
     {
       q: "Which platforms are supported?",
-      a: "Windows, macOS and Linux, with native builds for each. There is no web version and no mobile app — these are desktop tools built for real work."
+      a: "Windows, macOS and Linux, with native builds for each. There is no web version and no mobile app. These are desktop tools built for real work."
     },
     {
       q: "Can I contribute?",
-      a: "Absolutely. The repos are public, the roadmap is public, and issues are triaged in the open. Start with a small bug, a docs fix or a reproduction case — all of it helps."
+      a: "Absolutely. The repos are public, the roadmap is public, and issues are triaged in the open. Start with a small bug, a docs fix or a reproduction case. All of it helps."
     },
     {
       q: "How do updates work?",
@@ -1147,10 +1147,10 @@ function aboutPage() {
   const content = `
   <section class="page-hero">
     <div class="wrap">
-      <p class="eyebrow" style="margin-bottom:22px">About · ${site.founded} — ${year}</p>
+      <p class="eyebrow" style="margin-bottom:22px">About · since ${site.founded}</p>
       <h1>Tools should<br>not expire.</h1>
       <div class="page-hero__sub">
-        <p class="lede">Open Creative Suite is a set of professional desktop tools for people who make things — built in public, source-available, and free for as long as the files exist.</p>
+        <p class="lede">Open Creative Suite is a set of professional desktop tools for people who make things, built in public, source-available, and free for as long as the files exist.</p>
         <div class="btn-row">
           <a class="btn btn--lime" href="index.html#suite">Explore the suite ${icon("arrow")}</a>
           <a class="btn btn--outline" href="${site.github}" target="_blank" rel="noopener">${icon("github")} Source code</a>
@@ -1162,12 +1162,12 @@ function aboutPage() {
   <section class="section">
     <div class="wrap story">
       <div class="reveal">
-        <p class="eyebrow" style="margin-bottom:18px">01 — Why this exists</p>
+        <p class="eyebrow" style="margin-bottom:18px">01 / Why this exists</p>
         <h2>The work outlasts<br>the subscription.</h2>
       </div>
       <div class="story__body reveal">
         <p>Open Creative Suite started in ${site.founded} with a simple complaint: making a living from creative work increasingly requires renting the tools to do it. Miss a payment and the files become raw material for someone else's software.</p>
-        <p>So we built the alternative: ${countWord(products.length).toLowerCase()} focused applications for ${categoryList()}, with more on the way — sharing a design language and an obsession with <strong>files that open tomorrow</strong>. No accounts, no cloud, no licence server waiting to switch off.</p>
+        <p>So we built the alternative: ${countWord(products.length).toLowerCase()} focused applications for ${categoryList()}, with more on the way, sharing a design language and an obsession with <strong>files that open tomorrow</strong>. No accounts, no cloud, no licence server waiting to switch off.</p>
         <p>The suite is funded by contributors, not customers. That changes the incentives: features ship when they are ready, not when the pricing page needs a new tier. Nothing is held back to protect an upsell, because there isn't one.</p>
         <p>It is not a protest project. These are tools we use every day, built to a professional standard, with the specific goal of being <strong>unremarkable to switch to</strong>. Open the app, find the tool, do the work, export.</p>
       </div>
@@ -1177,7 +1177,7 @@ function aboutPage() {
   <section class="section section--dark">
     <div class="wrap">
       <div class="sec-head">
-        <p class="eyebrow sec-head__eyebrow">02 — What we believe</p>
+        <p class="eyebrow sec-head__eyebrow">02 / What we believe</p>
         <h2>Four rules.<br>No exceptions.</h2>
         <p class="lede">These are not marketing values. They are constraints that decide what we build and what we refuse to build.</p>
       </div>
@@ -1192,7 +1192,7 @@ function aboutPage() {
         </div>
         <div class="principle">
           <span class="principle__num">03</span>
-          <div><h3>Source in the open</h3><p>Apache 2.0 with the Commons Clause, a public roadmap and public issues. You get the same code we run — including the right to fork it for yourself.</p></div>
+          <div><h3>Source in the open</h3><p>Apache 2.0 with the Commons Clause, a public roadmap and public issues. You get the same code we run, including the right to fork it for yourself.</p></div>
         </div>
         <div class="principle">
           <span class="principle__num">04</span>
@@ -1205,7 +1205,7 @@ function aboutPage() {
   <section class="section" id="licensing">
     <div class="wrap story">
       <div class="reveal">
-        <p class="eyebrow" style="margin-bottom:18px">03 — Licensing</p>
+        <p class="eyebrow" style="margin-bottom:18px">03 / Licensing</p>
         <h2>Apache 2.0<br>+ Commons Clause.</h2>
       </div>
       <div class="story__body reveal">
@@ -1213,8 +1213,8 @@ function aboutPage() {
         <p><strong>Your output is yours.</strong> The licence covers the software, not the images, icons, logos or layouts you make with it.</p>
         <p><strong>Modify it and share it.</strong> Fork the source, change it, build your own version. If you pass it on, keep the licence and notices with it.</p>
         <p><strong>Don't sell the software.</strong> You may not sell the app itself, a renamed copy, or a product or service whose value derives entirely or substantially from it. Selling the work you make with it is fine.</p>
-        <p><strong>No warranty.</strong> These are professional tools, but they are provided as-is. Back up your work — as you would with any app.</p>
-        <p class="mono" style="color:var(--muted);letter-spacing:.06em">Source-available, not OSI open source — because of the no-resale condition.</p>
+        <p><strong>No warranty.</strong> These are professional tools, but they are provided as-is. Back up your work, as you would with any app.</p>
+        <p class="mono" style="color:var(--muted);letter-spacing:.06em">Source-available, not OSI open source, because of the no-resale condition.</p>
         <a class="text-link" href="${repoUrl(products[0])}/blob/master/LICENSE.md" target="_blank" rel="noopener">Read the full licence ${icon(
           "arrowUpRight"
         )}</a>
@@ -1225,7 +1225,7 @@ function aboutPage() {
   <section class="section section--paper2" id="faq">
     <div class="wrap">
       <div class="sec-head">
-        <p class="eyebrow sec-head__eyebrow">04 — Questions</p>
+        <p class="eyebrow sec-head__eyebrow">04 / Questions</p>
         <h2>The honest<br>answers.</h2>
         <p class="lede">If something is still unclear, the issue tracker and the GitHub community are open. No support tier, no ticket queue.</p>
       </div>
@@ -1245,7 +1245,7 @@ function aboutPage() {
   <section class="section section--tight">
     <div class="wrap">
       <div class="sec-head">
-        <p class="eyebrow sec-head__eyebrow">05 — The suite</p>
+        <p class="eyebrow sec-head__eyebrow">05 / The suite</p>
         <h2>Pick a tool.</h2>
       </div>
       <div class="next-grid">${index}</div>
@@ -1275,7 +1275,7 @@ function aboutPage() {
   });
 
   return pageShell({
-    title: `About — ${site.name}`,
+    title: `About ${site.name}`,
     description: "Why Open Creative Suite exists, how it is licensed, and why the tools are free forever.",
     path: "/about.html",
     base: "./",
@@ -1290,7 +1290,7 @@ function notFoundPage() {
   const content = `
   <section class="notfound">
     <div class="wrap notfound__in">
-      <p class="eyebrow">Error 404 — Nothing on this artboard</p>
+      <p class="eyebrow">Error 404 / Nothing on this artboard</p>
       <h1>404</h1>
       <p class="lede" style="max-width:40ch">That page has been moved, renamed or never existed. The tools are still where you left them.</p>
       <div class="btn-row">
@@ -1301,7 +1301,7 @@ function notFoundPage() {
     <div class="notfound__bg" aria-hidden="true">${productGlyph("spray")}</div>
   </section>`;
   return pageShell({
-    title: `Page not found — ${site.name}`,
+    title: `Page not found | ${site.name}`,
     description: "That page could not be found.",
     path: "/404.html",
     base,
