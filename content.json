@@ -1,0 +1,195 @@
+{
+  "site": {
+    "name": "Open Creative Suite",
+    "shortName": "OCS",
+    "tagline": "Free creative tools. Yours forever.",
+    "description": "PixelDotNet and VectorDotNet: professional image editing and vector design tools. Free forever, source-available, with no subscriptions and no accounts.",
+    "url": "https://opencreativesuite.github.io",
+    "github": "https://github.com/OpenCreativeSuite",
+    "community": "https://github.com/OpenCreativeSuite",
+    "license": "Apache 2.0 + Commons Clause",
+    "licenseShort": "Apache-2.0 + CC",
+    "licenseUrl": "https://github.com/OpenCreativeSuite/PixelDotNet/blob/master/LICENSE.md",
+    "founded": "2021"
+  },
+  "products": [
+    {
+      "slug": "pixeldotnet",
+      "name": "PixelDotNet",
+      "titleLines": ["Pixel", "DotNet"],
+      "category": "Image Editing",
+      "shortCategory": "image editing",
+      "glyph": "spray",
+      "mock": "photo",
+      "accent": "#FF2D87",
+      "accentSoft": "#FFD9E8",
+      "tagline": "An editor that gets out of the way.",
+      "blurb": "A desktop image editor for the jobs people actually do: retouching a photo, cutting out a subject, building a poster, or painting something from scratch.",
+      "version": "1.0.1",
+      "released": "2026-11-19",
+      "repo": "OpenCreativeSuite/PixelDotNet",
+      "license": "Apache 2.0 + Commons Clause",
+      "licenseShort": "Apache-2.0 + CC",
+      "platforms": ["Windows", "macOS", "Linux"],
+      "formats": ["PNG", "JPEG", "SVG", "BMP", "TGA", "PXD"],
+      "size": "35 MB",
+      "filename": "moonlight.pxd",
+      "status": "768 × 576 · RGB/8 · 3 LAYERS",
+      "docs": "https://opencreativesuite.github.io/PixelDotNet/",
+      "shotWidth": 1456,
+      "shotHeight": 939,
+      "images": {
+        "hero": {
+          "file": "main.png",
+          "alt": "PixelDotNet editing the Moonlight sample artwork, with the tool rail, canvas and layer stack visible"
+        },
+        "shots": [
+          {
+            "file": "paint.png",
+            "label": "Painting",
+            "caption": "Brushes, shapes, gradients and editable paths — all on their own layers."
+          },
+          {
+            "file": "quickselect.png",
+            "label": "Cut-outs",
+            "caption": "Quick Selection and layer masks for clean subject cut-outs without the fuss."
+          },
+          {
+            "file": "textfx.png",
+            "label": "Text effects",
+            "caption": "Live outlines, shadows and neon-style glows that stay editable."
+          }
+        ]
+      },
+      "features": [
+        {
+          "title": "Paint and draw",
+          "body": "A round brush with size, hardness and opacity, plus eraser, lines, rectangles, ellipses, gradients, paths and live text."
+        },
+        {
+          "title": "Retouch the mess",
+          "body": "Clone Stamp, Healing Brush, Dodge and Burn, Content-Aware Fill, perspective and mesh warp — the everyday repair kit."
+        },
+        {
+          "title": "Cut it out clean",
+          "body": "Quick Selection, Magic Wand and layer masks. Lift a subject off its background and keep the edges honest."
+        },
+        {
+          "title": "Layers that behave",
+          "body": "Masks, clipping, groups, blend modes and smart objects. Non-destructive shadows, strokes and glows."
+        },
+        {
+          "title": "Type with teeth",
+          "body": "Editable text layers with outlines, shadows and glows, plus text on a path when the layout asks for it."
+        },
+        {
+          "title": "Real files, no lock-in",
+          "body": "PNG, JPEG, BMP, TGA, SVG and layered .pxd projects. Batch-resize and convert a folder when the brief changes."
+        }
+      ],
+      "shots": [
+        {
+          "label": "Workspace",
+          "caption": "The full canvas: tools on the left, layers on the right, and a sample you can start painting on immediately."
+        },
+        {
+          "label": "Selections",
+          "caption": "Lift a subject out of its background, refine the mask, and keep the original pixels."
+        },
+        {
+          "label": "Text",
+          "caption": "Set type with live effects, then reopen it tomorrow and change the words."
+        }
+      ]
+    },
+    {
+      "slug": "vectordotnet",
+      "name": "VectorDotNet",
+      "titleLines": ["Vector", "DotNet"],
+      "category": "Vector Design",
+      "shortCategory": "vector design",
+      "glyph": "pen",
+      "mock": "vector",
+      "accent": "#8A5CFF",
+      "accentSoft": "#E3DAFF",
+      "tagline": "Design without limits.",
+      "blurb": "A desktop vector studio for illustration, icons, logos and layout. Draw real Bézier paths, shape them, style them and export clean SVG.",
+      "version": "1.0.0",
+      "released": "2026-11-19",
+      "repo": "OpenCreativeSuite/VectorDotNet",
+      "license": "Apache 2.0 + Commons Clause",
+      "licenseShort": "Apache-2.0 + CC",
+      "platforms": ["Windows", "macOS", "Linux"],
+      "formats": ["SVG", "SVGZ", "TTF", "OTF", "WOFF", "WOFF2"],
+      "size": "35 MB",
+      "filename": "sample_poster.svg",
+      "status": "ARTBOARD 1200 × 800 · 12 OBJECTS",
+      "docs": "https://opencreativesuite.github.io/VectorDotNet/",
+      "shotWidth": 1376,
+      "shotHeight": 879,
+      "images": {
+        "hero": {
+          "file": "main.png",
+          "alt": "VectorDotNet showing a poster artboard, live rounded rectangle selection and the inspector"
+        },
+        "shots": [
+          {
+            "file": "canvas.png",
+            "label": "Canvas",
+            "caption": "Artboards, rulers, live shapes and a stable workspace that keeps up with the pointer."
+          },
+          {
+            "file": "colour.png",
+            "label": "Colour",
+            "caption": "An HSV field, alpha strip, recent colours and a palette pulled from your document."
+          },
+          {
+            "file": "fonts.png",
+            "label": "Typography",
+            "caption": "Every installed family, previewed in its own face — plus your own font files at runtime."
+          }
+        ]
+      },
+      "features": [
+        {
+          "title": "Draw real curves",
+          "body": "A pen with cubic anchors and mirrored handles, a smoothing pencil, lasso and full direct-selection editing."
+        },
+        {
+          "title": "Live shapes",
+          "body": "Rectangles, ellipses, stars, polygons and spirals keep their parameters. Change a corner radius or add points later."
+        },
+        {
+          "title": "Snap to anything",
+          "body": "Smart guides for object edges and centres, artboards, the grid and dragged ruler guides — with Shift to constrain."
+        },
+        {
+          "title": "Documents, organised",
+          "body": "Nested groups, unlimited layers, locks, visibility, artboards, tabs and independent undo histories."
+        },
+        {
+          "title": "Colour and type",
+          "body": "An HSV picker with alpha and document palettes; searchable system fonts with live previews and runtime font loading."
+        },
+        {
+          "title": "Clean SVG in and out",
+          "body": "Import SVG and SVGZ into editable groups and paths. Export standards-compliant SVG or SVGZ, not a flattened picture."
+        }
+      ],
+      "shots": [
+        {
+          "label": "Workspace",
+          "caption": "The sample poster: artboards, a live selection, and every object still editable in the layer tree."
+        },
+        {
+          "label": "Colour",
+          "caption": "Pick a colour with the field and strips, or pull one straight from the artwork."
+        },
+        {
+          "label": "Typography",
+          "caption": "Search every installed family, preview it in its own face, or load a font file on the spot."
+        }
+      ]
+    }
+  ]
+}
