@@ -3,7 +3,7 @@
     "name": "Open Creative Suite",
     "shortName": "OCS",
     "tagline": "Free creative tools. Yours forever.",
-    "description": "PixelDotNet and VectorDotNet: professional image editing and vector design tools. Free forever, source-available, with no subscriptions and no accounts.",
+    "description": "PixelDotNet, VectorDotNet and Hieroglyph.NET: professional image editing, vector design and typeface design tools. Free forever, source-available, with no subscriptions and no accounts.",
     "url": "https://opencreativesuite.github.io",
     "github": "https://github.com/OpenCreativeSuite",
     "community": "https://github.com/OpenCreativeSuite",
@@ -188,6 +188,95 @@
         {
           "label": "Typography",
           "caption": "Search every installed family, preview it in its own face, or load a font file on the spot."
+        }
+      ]
+    },
+    {
+      "slug": "hieroglyphdotnet",
+      "name": "Hieroglyph.NET",
+      "titleLines": ["Hieroglyph", ".NET"],
+      "category": "Typeface Design",
+      "shortCategory": "typeface design",
+      "glyph": "font",
+      "mock": "type",
+      "accent": "#FF8A3D",
+      "accentSoft": "#FFE3CC",
+      "tagline": "Design a typeface. Export a real font.",
+      "blurb": "A desktop typeface editor for anyone who wants to make a font: paint a character for every letter, preview the alphabet, then export a real TTF, OTF, WOFF or WOFF2 file you can install and use.",
+      "version": "1.0.0",
+      "released": "2026-11-19",
+      "repo": "OpenCreativeSuite/HieroglyphDotNet",
+      "license": "Apache 2.0 + Commons Clause",
+      "licenseShort": "Apache-2.0 + CC",
+      "platforms": ["Windows", "macOS", "Linux"],
+      "formats": ["TTF", "OTF", "WOFF", "WOFF2", "HGL"],
+      "size": "35 MB",
+      "filename": "occam-regular.ttf",
+      "status": "GLYPH A · UPM 1000 · 77 / 131 DRAWN",
+      "docs": "https://opencreativesuite.github.io/HieroglyphDotNet/",
+      "shotWidth": 1440,
+      "shotHeight": 920,
+      "images": {
+        "hero": {
+          "file": "main.png",
+          "alt": "Hieroglyph.NET editing the letter A, with the character browser, metric guides, inspector and live type preview"
+        },
+        "shots": [
+          {
+            "file": "brush.png",
+            "label": "Drawing",
+            "caption": "Drag with the brush and the stroke becomes one smooth, closed, editable outline."
+          },
+          {
+            "file": "alphabet.png",
+            "label": "Preview",
+            "caption": "A live preview dock renders the developing typeface with size, tracking and leading controls."
+          },
+          {
+            "file": "export.png",
+            "label": "Export",
+            "caption": "Four font formats, a plain-language validation report and one-click install."
+          }
+        ]
+      },
+      "features": [
+        {
+          "title": "A brush that draws",
+          "body": "Drag freely and the stroke becomes one smooth, editable outline, with an adjustable width in font units. The pen is there when you want exact curves."
+        },
+        {
+          "title": "Guides that mean something",
+          "body": "Baseline, x-height, cap height, ascender and descender on the canvas, with sidebearing shading and a draggable advance width."
+        },
+        {
+          "title": "Space the alphabet",
+          "body": "Advance widths and sidebearings for every character, plus a visual kerning editor for AV, To, Ta and any pair you choose."
+        },
+        {
+          "title": "See it as text",
+          "body": "Live text, the full alphabet and kerning previews while you edit, and a specimen sheet that presents the finished family."
+        },
+        {
+          "title": "Real font files",
+          "body": "TrueType, CFF, kerning tables and web-font containers compiled from your outlines, with a report written for people rather than compilers."
+        },
+        {
+          "title": "Yours to keep",
+          "body": "Projects are readable .hgl JSON files. Export TTF, OTF, WOFF or WOFF2, install on Windows in one click, and own the typeface outright."
+        }
+      ],
+      "shots": [
+        {
+          "label": "Drawing",
+          "caption": "The em square, metric guides and live stroke preview. Every point stays editable after the brush commits it."
+        },
+        {
+          "label": "Preview",
+          "caption": "Type a sample, switch to the alphabet or kerning tab, and see the typeface working before it is compiled."
+        },
+        {
+          "label": "Export",
+          "caption": "Choose a format, read what is unfinished, then install the font or open the specimen sheet."
         }
       ]
     }

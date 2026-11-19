@@ -90,7 +90,11 @@ function productGlyph(slug, cls = "glyph") {
       <path d="M32 5L56 19v26L32 59 8 45V19Z" stroke="currentColor" stroke-width="4" fill="none" stroke-linejoin="miter"/>
       <path d="M8 19l24 14 24-14M32 33v26" stroke="currentColor" stroke-width="4" fill="none"/>`,
     type: `
-      <text x="2" y="46" font-family="Archivo, Arial Black, sans-serif" font-weight="900" font-size="38" letter-spacing="-3" fill="currentColor">Aa</text>`
+      <text x="2" y="46" font-family="Archivo, Arial Black, sans-serif" font-weight="900" font-size="38" letter-spacing="-3" fill="currentColor">Aa</text>`,
+    font: `
+      <path d="M12 56 30 12h4l18 44" stroke="currentColor" stroke-width="4.5" fill="none" stroke-linejoin="miter"/>
+      <path d="M20 39h20" stroke="currentColor" stroke-width="4.5"/>
+      <path d="M6 56h52" stroke="currentColor" stroke-width="2.5" stroke-linecap="square"/>`
   };
   return `<svg class="${cls}" viewBox="0 0 64 64" aria-hidden="true" fill="none">${glyphs[slug] || glyphs.cube}</svg>`;
 }
@@ -1075,7 +1079,7 @@ function appPage(p, index) {
     url: `${siteUrl}${canonicalPath}`,
     downloadUrl: releaseUrl(p),
     license: `${repoUrl(p)}/blob/master/LICENSE.md`,
-    screenshot: p.images && p.images.hero ? `${siteUrl}${imageSrc("", p, p.images.hero.file)}` : undefined,
+    screenshot: p.images && p.images.hero ? `${siteUrl}/${imageSrc("", p, p.images.hero.file)}` : undefined,
     offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
     publisher: { "@type": "Organization", name: site.name, url: `${siteUrl}/` }
   });

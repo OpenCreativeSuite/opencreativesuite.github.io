@@ -1,6 +1,6 @@
 # Open Creative Suite website
 
-The static product site for **Open Creative Suite**: [PixelDotNet](https://github.com/OpenCreativeSuite/PixelDotNet) and [VectorDotNet](https://github.com/OpenCreativeSuite/VectorDotNet).
+The static product site for **Open Creative Suite**: [PixelDotNet](https://github.com/OpenCreativeSuite/PixelDotNet), [VectorDotNet](https://github.com/OpenCreativeSuite/VectorDotNet) and [Hieroglyph.NET](https://github.com/OpenCreativeSuite/HieroglyphDotNet).
 
 No frameworks, no bundler and no runtime dependencies. Product pages, sitemap and metadata are generated from one file (`content.json`) into plain HTML, with a shared CSS/JS layer.
 
