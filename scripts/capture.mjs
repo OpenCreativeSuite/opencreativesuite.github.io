@@ -1,6 +1,6 @@
 /* Headless screenshot helper for local review.
    Usage:
-   node scripts/capture.mjs --url=http://localhost:4173/ --out=shot.png \
+   node scripts/capture.mjs --url=http://localhost:4174/ --out=shot.png \
      --w=1440 --h=1000 --scroll=0 [--full] [--mobile] [--click="<selector>"]
 */
 import { spawn } from "node:child_process";
@@ -15,7 +15,7 @@ const args = Object.fromEntries(
   })
 );
 
-const url = String(args.url || "http://localhost:4173/");
+const url = String(args.url || "http://localhost:4174/");
 const out = resolve(String(args.out || "shot.png"));
 const width = Number(args.w || 1440);
 const height = Number(args.h || 1000);

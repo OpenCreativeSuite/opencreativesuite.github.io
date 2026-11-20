@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://opencreativesuite.github.io/sitemap.xml

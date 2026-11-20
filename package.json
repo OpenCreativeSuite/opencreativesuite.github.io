@@ -8,8 +8,6 @@
     "build": "dotnet publish OpenCreativeSuite.csproj -c Release -f net10.0-browser",
     "build:docs": "dotnet publish OpenCreativeSuite.csproj -c Release -f net10.0-browser && node scripts/stage-docs.mjs",
     "serve": "node scripts/serve-wasm.mjs",
-    "build:static": "node scripts/build.mjs",
-    "serve:static": "node scripts/serve.mjs",
-    "check": "node scripts/check-links.mjs"
+    "serve:docs": "node scripts/serve-wasm.mjs --root=docs"
   }
 }
