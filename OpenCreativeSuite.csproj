@@ -5,8 +5,9 @@
     to the browser target and declares its content, assets and stylesheets.
   -->
   <PropertyGroup>
+    <RuntimeIdentifiers Condition="'$(TargetFramework)' == ''">browser-wasm</RuntimeIdentifiers>
     <DonkehVersion>1.0.44</DonkehVersion>
-    <TargetFramework>net10.0</TargetFramework>
+    <TargetFrameworks>net10.0;net10.0-browser</TargetFrameworks>
     <DonkehDesktop>false</DonkehDesktop>
     <DonkehWeb>true</DonkehWeb>
   </PropertyGroup>
@@ -51,5 +52,14 @@
 
   <ItemGroup>
     <PackageReference Include="Donkeh.Windowing" Version="$(DonkehVersion)" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Donkeh.Windowing.Browser" Version="$(DonkehVersion)" Condition="'$(TargetFramework)' == 'net10.0-browser'" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="10.0.10" Condition="'$(TargetFramework)' == 'net10.0-browser'" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Sdk.WebAssembly.Pack" Version="10.0.11" Condition="'$(TargetFramework)' == 'net10.0-browser'" PrivateAssets="all" GeneratePathProperty="true" />
   </ItemGroup>
 </Project>
