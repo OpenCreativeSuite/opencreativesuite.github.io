@@ -5,15 +5,15 @@
     to the browser target and declares its content, assets and stylesheets.
   -->
   <PropertyGroup>
+    <DonkehVersion>1.0.44</DonkehVersion>
+    <TargetFramework>net10.0</TargetFramework>
     <DonkehDesktop>false</DonkehDesktop>
     <DonkehWeb>true</DonkehWeb>
   </PropertyGroup>
 
-  <Import Project="$(DonkehRoot)\Build\Donkeh.props" />
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFrameworks>$(DonkehTargetFrameworks)</TargetFrameworks>
     <RootNamespace>OpenCreativeSuite</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
@@ -25,6 +25,8 @@
     <DefaultItemExcludes>$(DefaultItemExcludes);builds/**;docs/**</DefaultItemExcludes>
     <!-- The site is English-only and does not need ICU globalization data. -->
     <InvariantGlobalization>true</InvariantGlobalization>
+    <!-- Identifies this project to Directory.Build.targets. -->
+    <IsOpenCreativeSuite>true</IsOpenCreativeSuite>
   </PropertyGroup>
 
   <ItemGroup>
@@ -47,4 +49,7 @@
              CopyToPublishDirectory="PreserveNewest" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Donkeh.Windowing" Version="$(DonkehVersion)" />
+  </ItemGroup>
 </Project>
