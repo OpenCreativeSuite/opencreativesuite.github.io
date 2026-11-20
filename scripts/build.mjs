@@ -862,7 +862,7 @@ function appPage(p, index) {
   const features = p.features
     .map(
       (f, i) => `<div class="feature reveal">
-        <span class="feature__num"><b>${pad(i + 1)}</b> / 06</span>
+        <span class="feature__num"><b>${pad(i + 1)}</b> / ${pad(p.features.length)}</span>
         <h3>${esc(f.title)}</h3>
         <p>${esc(f.body)}</p>
       </div>`
@@ -892,6 +892,47 @@ function appPage(p, index) {
     </figure>`;
     })
     .join("");
+
+  const detailSections = (p.detailSections || [])
+    .map((section, s) => {
+      const featureGrid = section.features
+        .map(
+          (f, i) => `<div class="feature reveal">
+        <span class="feature__num"><b>${pad(i + 1)}</b> / ${pad(section.features.length)}</span>
+        <h3>${esc(f.title)}</h3>
+        <p>${esc(f.body)}</p>
+      </div>`
+        )
+        .join("");
+      const shotGrid = section.images
+        .map(
+          (image) => `<figure class="shot reveal">
+        <div class="shot__frame"><img class="app-shot" src="${imageSrc(base, p, image.file)}" alt="${esc(
+            image.alt || `${p.name}: ${image.label}`
+          )}" width="${p.shotWidth || 1440}" height="${p.shotHeight || 900}" loading="lazy" decoding="async"></div>
+        <figcaption class="shot__cap"><span class="shot__label">${esc(image.label)}</span><p>${esc(
+            image.caption
+          )}</p></figcaption>
+      </figure>`
+        )
+        .join("");
+      const pair = section.images.length === 2 || section.images.length === 4;
+
+      return `<section class="section${s % 2 === 1 ? " section--paper2" : ""}">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow sec-head__eyebrow">${esc(section.eyebrow)}</p>
+        <h2>${section.title}</h2>
+        <p class="lede">${esc(section.lede)}</p>
+      </div>
+      <div class="features">${featureGrid}</div>
+      <div class="shots-grid${pair ? " shots-grid--pair" : ""}">${shotGrid}</div>
+    </div>
+  </section>`;
+    })
+    .join("\n\n  ");
+
+  const specsNumber = pad(3 + (p.detailSections ? p.detailSections.length : 0));
 
   const specs = `
     <div class="spec"><dt>Latest release</dt><dd>v${esc(p.version)}<small>${esc(p.released)}</small></dd></div>
@@ -1003,11 +1044,11 @@ function appPage(p, index) {
       <div class="shots-grid">${shots}</div>
     </div>
   </section>
-
+${detailSections ? `\n  ${detailSections}\n` : ""}
   <section class="section section--tight">
     <div class="wrap">
       <div class="sec-head">
-        <p class="eyebrow sec-head__eyebrow">03 / The fine print</p>
+        <p class="eyebrow sec-head__eyebrow">${specsNumber} / The fine print</p>
         <h2>Specs.</h2>
         <p class="lede">No surprises in the small type. Here is exactly what you are downloading.</p>
       </div>

@@ -16,7 +16,10 @@
     {
       "slug": "pixeldotnet",
       "name": "PixelDotNet",
-      "titleLines": ["Pixel", "DotNet"],
+      "titleLines": [
+        "Pixel",
+        "DotNet"
+      ],
       "category": "Image Editing",
       "shortCategory": "image editing",
       "glyph": "spray",
@@ -30,14 +33,25 @@
       "repo": "OpenCreativeSuite/PixelDotNet",
       "license": "Apache 2.0 + Commons Clause",
       "licenseShort": "Apache-2.0 + CC",
-      "platforms": ["Windows", "macOS", "Linux"],
-      "formats": ["PNG", "JPEG", "SVG", "BMP", "TGA", "PXD"],
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux"
+      ],
+      "formats": [
+        "PNG",
+        "JPEG",
+        "SVG",
+        "BMP",
+        "TGA",
+        "PXD"
+      ],
       "size": "35 MB",
       "filename": "moonlight.pxd",
       "status": "768 × 576 · RGB/8 · 3 LAYERS",
       "docs": "https://opencreativesuite.github.io/PixelDotNet/",
-      "shotWidth": 1456,
-      "shotHeight": 939,
+      "shotWidth": 1440,
+      "shotHeight": 900,
       "images": {
         "hero": {
           "file": "main.png",
@@ -46,18 +60,21 @@
         "shots": [
           {
             "file": "paint.png",
+            "alt": "PixelDotNet painting a white brush stroke on its own layer over the Moonlight sample",
             "label": "Painting",
-            "caption": "Brushes, shapes, gradients and editable paths, all on their own layers."
+            "caption": "Brushes, shapes and gradients on their own layers, with live options for every tool."
           },
           {
             "file": "quickselect.png",
+            "alt": "PixelDotNet Quick Selection growing around the moon and sky in the Moonlight sample",
             "label": "Cut-outs",
-            "caption": "Quick Selection and layer masks for clean subject cut-outs without the fuss."
+            "caption": "Quick Selection grows around the subject while the original pixels stay underneath."
           },
           {
             "file": "textfx.png",
+            "alt": "PixelDotNet Text effects panel with outline and glow controls on a Moonlight text layer",
             "label": "Text effects",
-            "caption": "Live outlines, shadows and neon-style glows that stay editable."
+            "caption": "Live outlines, shadows and glows, still editable when you reopen the layer."
           }
         ]
       },
@@ -89,23 +106,329 @@
       ],
       "shots": [
         {
-          "label": "Workspace",
-          "caption": "The full canvas: tools on the left, layers on the right, and a sample you can start painting on immediately."
+          "label": "Painting",
+          "caption": "Brushes, shapes and gradients on their own layers, with live options for every tool."
         },
         {
-          "label": "Selections",
-          "caption": "Lift a subject out of its background, refine the mask, and keep the original pixels."
+          "label": "Cut-outs",
+          "caption": "Quick Selection grows around the subject while the original pixels stay underneath."
         },
         {
-          "label": "Text",
-          "caption": "Set type with live effects, then reopen it tomorrow and change the words."
+          "label": "Text effects",
+          "caption": "Live outlines, shadows and glows, still editable when you reopen the layer."
+        }
+      ],
+      "detailSections": [
+        {
+          "eyebrow": "03 / Painting and drawing",
+          "title": "Paint, shape,<br>and path.",
+          "lede": "A brush that behaves, shape layers you can reopen, and paths whose nodes stay editable. The drawing tools are built to be adjusted later, not baked in.",
+          "features": [
+            {
+              "title": "Brush with options",
+              "body": "A round brush with size, hardness and opacity, plus eraser, line, rectangle, ellipse, gradient, bucket and eyedropper in the same rail."
+            },
+            {
+              "title": "Shape layers",
+              "body": "Turn on Shape layer for a rectangle, ellipse or line, then reopen Edit Shape to change its size, stroke, fill and colour."
+            },
+            {
+              "title": "Paths and nodes",
+              "body": "Draw with the Pen, then drag anchors and handles, click a segment to insert a node, and add or delete points precisely."
+            },
+            {
+              "title": "Retouch kit",
+              "body": "Clone Stamp, Healing Brush, Dodge and Burn, Content-Aware Fill, perspective and mesh warp for the everyday repairs."
+            }
+          ],
+          "images": [
+            {
+              "file": "paint.png",
+              "label": "Paint",
+              "alt": "The PixelDotNet Brush tool painting a stroke on its own layer",
+              "caption": "The Brush is active, the stroke lands on its own layer, and size, hardness and opacity are one drag away."
+            },
+            {
+              "file": "shape.png",
+              "label": "Shapes",
+              "alt": "The PixelDotNet Edit Shape dialog with position, size, stroke, fill and colour controls",
+              "caption": "Edit Shape. A shape layer keeps its position, size, outline and fill editable long after it was drawn."
+            },
+            {
+              "file": "pathnodes.png",
+              "label": "Paths",
+              "alt": "A PixelDotNet path layer with visible anchors and one selected node",
+              "caption": "Edit nodes. Drag an anchor to move the path or a handle to change the curve, with Add Node and Delete Node for precision."
+            }
+          ]
+        },
+        {
+          "eyebrow": "04 / Selecting and masking",
+          "title": "Cut out.<br>Keep the pixels.",
+          "lede": "Selections protect part of the picture while you work. Masks make that protection permanent, paintable and completely reversible.",
+          "features": [
+            {
+              "title": "Quick Selection",
+              "body": "Paint over a subject and the selection grows through neighbouring similar pixels. Hold Alt or press Subtract to take areas back."
+            },
+            {
+              "title": "Five selection tools",
+              "body": "Marquee, ellipse, lasso, Magic Wand and Quick Selection, with Shift, Ctrl and Alt to add, subtract or intersect areas."
+            },
+            {
+              "title": "Layer masks",
+              "body": "White reveals, black hides and grey fades. Paint the mask at any time; the layer pixels are never destroyed."
+            },
+            {
+              "title": "Clip and align",
+              "body": "Clip a layer to the artwork below, or use rulers, guides and snapping to line everything up."
+            }
+          ],
+          "images": [
+            {
+              "file": "quickselect.png",
+              "label": "Cut-outs",
+              "alt": "The PixelDotNet Quick Selection tool highlighting the sky and moon on the sample image",
+              "caption": "Quick Selection grows through connected, similar pixels. Alt or Subtract takes back the background it caught."
+            },
+            {
+              "file": "selection.png",
+              "label": "Selections",
+              "alt": "A rectangular marquee selection shown as a dotted outline on the PixelDotNet canvas",
+              "caption": "A marquee selection. Everything outside the dashed outline is protected from the next edit."
+            }
+          ]
+        },
+        {
+          "eyebrow": "05 / Layers, styles and smart objects",
+          "title": "A stack you<br>can undo.",
+          "lede": "Every element gets its own layer, and every layer keeps its options. Groups, blend modes, live styles and smart objects are all part of the file.",
+          "features": [
+            {
+              "title": "Groups and blending",
+              "body": "Fold related layers into groups, fade a whole group at once, and mix with Multiply, Screen, Overlay and the rest."
+            },
+            {
+              "title": "Layer styles",
+              "body": "Drop shadow, stroke and outer glow redraw automatically whenever the layer or its mask changes."
+            },
+            {
+              "title": "Smart objects",
+              "body": "Scale, rotate and flip from a pristine copy of the original pixels, so repeated transforms stay sharp."
+            },
+            {
+              "title": "Locks and visibility",
+              "body": "Lock a finished layer, hide it with the eye, clip it to the layer below, or mask it without touching the pixels."
+            }
+          ],
+          "images": [
+            {
+              "file": "layers.png",
+              "label": "Layers",
+              "alt": "The PixelDotNet Layers panel with a group, layers, blend mode, clip, opacity and layer actions",
+              "caption": "The Layers panel. Groups, blend mode, clip and opacity all apply to the active row."
+            },
+            {
+              "file": "layerstyle.png",
+              "label": "Styles",
+              "alt": "The PixelDotNet Layer Style dialog showing Drop Shadow, Stroke and Outer Glow controls",
+              "caption": "Layer Style. Non-destructive shadows, strokes and glows that follow the artwork."
+            },
+            {
+              "file": "smartobject.png",
+              "label": "Smart objects",
+              "alt": "The PixelDotNet Smart Object transform dialog with position, scale, rotation and flip controls",
+              "caption": "Smart Object. Repeated transforms recalculate from the source pixels instead of resampling."
+            }
+          ]
+        },
+        {
+          "eyebrow": "06 / Type and paths",
+          "title": "Words that<br>stay words.",
+          "lede": "Text layers remain editable, effects stay live, and type can follow any path you draw. Change the words or the curve whenever you like.",
+          "features": [
+            {
+              "title": "Editable text",
+              "body": "Place a text layer, then reopen Edit Text to change the content, font, size, rotation, spacing, weight and fill."
+            },
+            {
+              "title": "Live effects",
+              "body": "Outlines, shadows and glows with presets and fine sliders. They stay attached to the text, not baked into it."
+            },
+            {
+              "title": "Text on a path",
+              "body": "Attach text to a path, slide it with Path offset and adjust spacing. Edit the nodes later and the letters follow."
+            },
+            {
+              "title": "Fonts on demand",
+              "body": "Work with installed families, or paste a font URL into the picker. It is the only optional online action in the app."
+            }
+          ],
+          "images": [
+            {
+              "file": "text.png",
+              "label": "Text",
+              "alt": "The PixelDotNet Edit Text dialog with text content, font, size, rotation and fill controls",
+              "caption": "Edit Text. The layer stays editable until you choose to rasterize it."
+            },
+            {
+              "file": "textfx.png",
+              "label": "Text FX",
+              "alt": "The PixelDotNet Text effects panel with outline, shadow and glow presets",
+              "caption": "Text effects. Presets set the look; the sliders refine the outline, shadow and glow."
+            },
+            {
+              "file": "textpath.png",
+              "label": "On a path",
+              "alt": "Text following a curved path layer in PixelDotNet",
+              "caption": "Text on a path. The letters rotate with the curve and update when the path changes."
+            }
+          ]
+        },
+        {
+          "eyebrow": "07 / Colour, effects and transforms",
+          "title": "Grade it.<br>Bend it.",
+          "lede": "Fix exposure and colour, apply a filter, then pull the picture into shape. Every control previews live and respects the current selection.",
+          "features": [
+            {
+              "title": "Adjust tab",
+              "body": "Brightness, contrast, hue, saturation and lightness, plus Levels and Curves, all previewed from the original pixels."
+            },
+            {
+              "title": "Adjustment layers",
+              "body": "Add a Levels or Curves layer to change everything below it without altering a single pixel."
+            },
+            {
+              "title": "Effects",
+              "body": "Gaussian and motion blur, fragment, pixelate, sharpen, emboss, edge detect, noise, posterize and vignette."
+            },
+            {
+              "title": "Colour Tools",
+              "body": "Colour balance, threshold, gradient map, replace colour, red-eye, channel mixer, selective colour and split channels."
+            }
+          ],
+          "images": [
+            {
+              "file": "adjust.png",
+              "label": "Adjust",
+              "alt": "The PixelDotNet Adjust tab with brightness, contrast, hue, saturation, levels and curves",
+              "caption": "The Adjust tab. Live sliders, Levels and Curves, all limited to the selection when one exists."
+            },
+            {
+              "file": "effects.png",
+              "label": "Effects",
+              "alt": "The PixelDotNet Effects tab with the effect list and amount slider",
+              "caption": "The Effects tab. Pick a filter, set the amount, then Apply or Cancel."
+            },
+            {
+              "file": "colour.png",
+              "label": "Colour",
+              "alt": "The PixelDotNet Colour Tools window with Colour Balance, Threshold and Gradient Map",
+              "caption": "Colour Tools. Eight independent operations, each with its own Apply button."
+            }
+          ]
+        },
+        {
+          "eyebrow": "08 / Transform and resize",
+          "title": "Tilt, warp,<br>resize.",
+          "lede": "Perspective for straight edges, mesh warp for gentle reshaping, and document controls that change the artwork or just the frame.",
+          "features": [
+            {
+              "title": "Perspective Transform",
+              "body": "Pull each corner independently to straighten a building, poster or screen. The preview updates live."
+            },
+            {
+              "title": "Mesh Warp",
+              "body": "A three-by-three grid bends the layer or selection around nine draggable points."
+            },
+            {
+              "title": "Image and Canvas Size",
+              "body": "Scale every layer, mask and guide, or add transparent space around the artwork without stretching it."
+            },
+            {
+              "title": "History",
+              "body": "A 24-step undo timeline per document. Jump back and forward without losing the thread."
+            }
+          ],
+          "images": [
+            {
+              "file": "perspective.png",
+              "label": "Perspective",
+              "alt": "The PixelDotNet Perspective Transform dialog with eight corner offset sliders",
+              "caption": "Perspective Transform. One pair of sliders for each corner, previewed live on the layer."
+            },
+            {
+              "file": "meshwarp.png",
+              "label": "Mesh warp",
+              "alt": "The PixelDotNet Mesh Warp grid with nine draggable points on the canvas",
+              "caption": "Mesh Warp. Drag the nine points to bend the picture, then press Done."
+            },
+            {
+              "file": "resize.png",
+              "label": "Resize",
+              "alt": "The PixelDotNet Image Size dialog with width, height and keep-aspect-ratio controls",
+              "caption": "Image Size. Scale all layers, masks and guides in one undoable step."
+            }
+          ]
+        },
+        {
+          "eyebrow": "09 / Files, batch and SVG",
+          "title": "Save it.<br>Ship it.",
+          "lede": "Share a flat image, keep a layered project, process a whole folder, or move vector artwork in and out without flattening it.",
+          "features": [
+            {
+              "title": "Layered projects",
+              "body": ".pxd files keep every layer, mask, group, style, smart object, shape, path and text layer."
+            },
+            {
+              "title": "Everyday formats",
+              "body": "PNG and TGA keep transparency, JPEG and BMP are ready to share, and the in-app browser remembers the folder."
+            },
+            {
+              "title": "Batch Process",
+              "body": "Resize, rename with a suffix and convert every supported image in a folder without opening a single tab."
+            },
+            {
+              "title": "SVG in and out",
+              "body": "Import SVG shapes as editable layers, and export shape, path and text layers as real SVG; painted layers ride along as an embedded PNG."
+            }
+          ],
+          "images": [
+            {
+              "file": "save.png",
+              "label": "Save",
+              "alt": "The PixelDotNet Save Image file browser with folders, file list, name field and format buttons",
+              "caption": "Save Image. Pick a folder, type a name, choose PNG, JPEG, BMP or TGA."
+            },
+            {
+              "file": "batch.png",
+              "label": "Batch",
+              "alt": "The PixelDotNet Batch Processing dialog with source and output folders, scale, suffix and format",
+              "caption": "Batch Processing. Point at a source and an output folder, then Run."
+            },
+            {
+              "file": "svgimport.png",
+              "label": "SVG in",
+              "alt": "The PixelDotNet Import SVG file browser showing an SVG file selected",
+              "caption": "Import SVG. Each shape arrives as its own editable layer."
+            },
+            {
+              "file": "svgexport.png",
+              "label": "SVG out",
+              "alt": "The PixelDotNet Export SVG file browser",
+              "caption": "Export SVG. Shapes, paths and text stay vector; painted layers are embedded as a PNG."
+            }
+          ]
         }
       ]
     },
     {
       "slug": "vectordotnet",
       "name": "VectorDotNet",
-      "titleLines": ["Vector", "DotNet"],
+      "titleLines": [
+        "Vector",
+        "DotNet"
+      ],
       "category": "Vector Design",
       "shortCategory": "vector design",
       "glyph": "pen",
@@ -119,8 +442,19 @@
       "repo": "OpenCreativeSuite/VectorDotNet",
       "license": "Apache 2.0 + Commons Clause",
       "licenseShort": "Apache-2.0 + CC",
-      "platforms": ["Windows", "macOS", "Linux"],
-      "formats": ["SVG", "SVGZ", "TTF", "OTF", "WOFF", "WOFF2"],
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux"
+      ],
+      "formats": [
+        "SVG",
+        "SVGZ",
+        "TTF",
+        "OTF",
+        "WOFF",
+        "WOFF2"
+      ],
       "size": "35 MB",
       "filename": "sample_poster.svg",
       "status": "ARTBOARD 1200 × 800 · 12 OBJECTS",
@@ -194,7 +528,10 @@
     {
       "slug": "hieroglyphdotnet",
       "name": "Hieroglyph.NET",
-      "titleLines": ["Hieroglyph", ".NET"],
+      "titleLines": [
+        "Hieroglyph",
+        ".NET"
+      ],
       "category": "Typeface Design",
       "shortCategory": "typeface design",
       "glyph": "font",
@@ -208,8 +545,18 @@
       "repo": "OpenCreativeSuite/HieroglyphDotNet",
       "license": "Apache 2.0 + Commons Clause",
       "licenseShort": "Apache-2.0 + CC",
-      "platforms": ["Windows", "macOS", "Linux"],
-      "formats": ["TTF", "OTF", "WOFF", "WOFF2", "HGL"],
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux"
+      ],
+      "formats": [
+        "TTF",
+        "OTF",
+        "WOFF",
+        "WOFF2",
+        "HGL"
+      ],
       "size": "35 MB",
       "filename": "occam-regular.ttf",
       "status": "GLYPH A · UPM 1000 · 77 / 131 DRAWN",

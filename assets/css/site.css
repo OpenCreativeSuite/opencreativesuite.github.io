@@ -2021,6 +2021,14 @@ body.menu-open .site-header::after {
   gap: clamp(16px, 2vw, 26px);
 }
 
+.features + .shots-grid {
+  margin-top: clamp(26px, 3vw, 44px);
+}
+
+.shots-grid--pair .shot:first-child {
+  grid-column: auto;
+}
+
 .shot {
   display: flex;
   flex-direction: column;
