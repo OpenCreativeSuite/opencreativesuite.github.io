@@ -1,6 +1,6 @@
 # Open Creative Suite website
 
-The product site for **Open Creative Suite**: [PixelDotNet](https://github.com/OpenCreativeSuite/PixelDotNet), [VectorDotNet](https://github.com/OpenCreativeSuite/VectorDotNet) and [Hieroglyph.NET](https://github.com/OpenCreativeSuite/HieroglyphDotNet).
+The product site for **Open Creative Suite**: [PixelDotNet](https://github.com/OpenCreativeSuite/PixelDotNet), [VectorDotNet](https://github.com/OpenCreativeSuite/VectorDotNet), [Hieroglyph.NET](https://github.com/OpenCreativeSuite/HieroglyphDotNet) and [Sonus.NET](https://github.com/OpenCreativeSuite/SonarDotNet).
 
 The site is a **Donkeh WebAssembly application**. It is built with real components and pages, uses the framework's `AppRouter`/`AppRoutes` routing, and publishes to `builds/wasm` as a static site.
 

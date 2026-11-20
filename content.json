@@ -3,7 +3,7 @@
     "name": "Open Creative Suite",
     "shortName": "OCS",
     "tagline": "Free creative tools. Yours forever.",
-    "description": "PixelDotNet, VectorDotNet and Hieroglyph.NET: professional image editing, vector design and typeface design tools. Free forever, source-available, with no subscriptions and no accounts.",
+    "description": "PixelDotNet, VectorDotNet, Hieroglyph.NET and Sonus.NET: professional image editing, vector design, typeface design and voice shaping tools. Free forever, source-available, with no subscriptions and no accounts.",
     "url": "https://opencreativesuite.github.io",
     "github": "https://github.com/OpenCreativeSuite",
     "community": "https://github.com/OpenCreativeSuite",
@@ -624,6 +624,261 @@
         {
           "label": "Export",
           "caption": "Choose a format, read what is unfinished, then install the font or open the specimen sheet."
+        }
+      ]
+    },
+    {
+      "slug": "sonardotnet",
+      "name": "Sonus.NET",
+      "titleLines": [
+        "Sonus",
+        ".NET"
+      ],
+      "category": "Voice Studio",
+      "shortCategory": "voice shaping",
+      "glyph": "wave",
+      "mock": "audio",
+      "accent": "#59E3B2",
+      "accentSoft": "#D6F9EC",
+      "tagline": "Shape the voice. Keep the words.",
+      "blurb": "A local-first voice studio for Windows. Sonus listens to your microphone, shapes it through five visual stages, lets you hear the result in headphones, and sends it anywhere as a virtual microphone.",
+      "version": "1.0.0",
+      "released": "2026-11-20",
+      "repo": "OpenCreativeSuite/SonarDotNet",
+      "license": "Apache 2.0 + Commons Clause",
+      "licenseShort": "Apache-2.0 + CC",
+      "platforms": [
+        "Windows"
+      ],
+      "formats": [
+        "WAV",
+        "JSON"
+      ],
+      "size": "40 MB",
+      "filename": "sonus-take.wav",
+      "status": "LIVE · 48 kHz · 5 STAGES",
+      "docs": "https://opencreativesuite.github.io/SonarDotNet/",
+      "shotWidth": 1440,
+      "shotHeight": 920,
+      "images": {
+        "hero": {
+          "file": "main.png",
+          "alt": "The Sonus.NET main window with the Voice stage open, the signal path on the left and live audio metering"
+        },
+        "shots": [
+          {
+            "file": "tone.png",
+            "label": "Tone",
+            "alt": "The Sonus.NET Tone stage with a draggable frequency-response curve and low and high cut",
+            "caption": "Drag Low, Body, Presence and Air points directly on the curve; the sound follows immediately."
+          },
+          {
+            "file": "voice.png",
+            "label": "Voice",
+            "alt": "The Sonus.NET Voice stage with pitch, vocal size, resonance, brightness and texture controls",
+            "caption": "Pitch moves the note while vocal size moves the formants, so a voice can feel bigger or smaller."
+          },
+          {
+            "file": "space.png",
+            "label": "Space",
+            "alt": "The Sonus.NET Space stage showing a room decay curve and echo controls",
+            "caption": "A short room, a room mix and a controlled echo place the voice somewhere else."
+          },
+          {
+            "file": "recording.png",
+            "label": "Recording",
+            "alt": "The Sonus.NET Takes panel with raw and processed versions of recent recordings",
+            "caption": "Every take keeps both versions: the raw microphone and the processed result."
+          },
+          {
+            "file": "presets.png",
+            "label": "Presets",
+            "alt": "The Sonus.NET preset library with enhancement and character presets",
+            "caption": "Start from an enhancement or a character preset, then save your own as local JSON."
+          },
+          {
+            "file": "settings.png",
+            "label": "Devices",
+            "alt": "The Sonus.NET audio settings with microphone, headphones and virtual microphone choices",
+            "caption": "Choose the physical microphone, the headphones and the virtual output in one place."
+          }
+        ]
+      },
+      "features": [
+        {
+          "title": "Live microphone capture",
+          "body": "Pick a device, set the input trim and watch the meters. A clipping hold shows when the signal went hot, and capture stops cleanly if a device disappears."
+        },
+        {
+          "title": "Five visual stages",
+          "body": "Clean, Tone, Dynamics, Voice and Space, each with its own editor and a bypass so you can hear exactly what it contributes."
+        },
+        {
+          "title": "A voice, not just an EQ",
+          "body": "Pitch and vocal size move independently, then resonance, brightness and texture finish the character."
+        },
+        {
+          "title": "Hear yourself",
+          "body": "Choose headphones, set a monitor level independent of the virtual output, and press TEST to confirm the route with a chime."
+        },
+        {
+          "title": "A real virtual microphone",
+          "body": "Sonus drives the signed VB-CABLE device, so Discord, OBS, Teams and games can select it like any other microphone."
+        },
+        {
+          "title": "Raw and processed takes",
+          "body": "Every recording writes the untouched microphone and the processed voice as two 48 kHz WAV files you can compare instantly."
+        }
+      ],
+      "shots": [
+        {
+          "label": "Tone",
+          "caption": "Drag Low, Body, Presence and Air points directly on the curve; the sound follows immediately."
+        },
+        {
+          "label": "Voice",
+          "caption": "Pitch moves the note while vocal size moves the formants, so a voice can feel bigger or smaller."
+        },
+        {
+          "label": "Space",
+          "caption": "A short room, a room mix and a controlled echo place the voice somewhere else."
+        },
+        {
+          "label": "Recording",
+          "caption": "Every take keeps both versions: the raw microphone and the processed result."
+        },
+        {
+          "label": "Presets",
+          "caption": "Start from an enhancement or a character preset, then save your own as local JSON."
+        },
+        {
+          "label": "Devices",
+          "caption": "Choose the physical microphone, the headphones and the virtual output in one place."
+        }
+      ],
+      "detailSections": [
+        {
+          "eyebrow": "03 / The five stages",
+          "title": "One path.<br>Five stages.",
+          "lede": "Each stage does one job and can be bypassed, so you always know what you are hearing. The signal flows from Clean through Tone, Dynamics, Voice and Space.",
+          "features": [
+            {
+              "title": "Clean",
+              "body": "A noise gate, gentle expansion and a room floor remove the air conditioner, the keyboard and the room itself."
+            },
+            {
+              "title": "Tone",
+              "body": "A four-point EQ you drag directly on the response graph, plus low cut and high cut for the edges."
+            },
+            {
+              "title": "Dynamics",
+              "body": "A visual compressor with draggable knee and ratio handles, make-up lift and an output limiter."
+            },
+            {
+              "title": "Bypass anything",
+              "body": "Switch a stage off to hear the difference, or reset it and start again without losing the rest of the chain."
+            }
+          ],
+          "images": [
+            {
+              "file": "clean.png",
+              "label": "Clean",
+              "alt": "The Sonus.NET Clean stage with a noise gate curve, room floor and expansion controls",
+              "caption": "Clean. Set the room floor and how far the gate closes before the rest of the chain sees the signal."
+            },
+            {
+              "file": "tone.png",
+              "label": "Tone",
+              "alt": "The Sonus.NET Tone stage with a movable frequency response and low and high cut",
+              "caption": "Tone. The curve is the control: drag the points and the frequency response changes with them."
+            },
+            {
+              "file": "dynamics.png",
+              "label": "Dynamics",
+              "alt": "The Sonus.NET Dynamics stage with a compressor curve, make-up lift and output limiter",
+              "caption": "Dynamics. Drag the knee and ratio handles, then watch the live gain reduction as you speak."
+            }
+          ]
+        },
+        {
+          "eyebrow": "04 / Voice and space",
+          "title": "Change the voice.<br>Place it in a room.",
+          "lede": "The Voice stage changes who is speaking; the Space stage changes where. Both preview live, and the original microphone signal stays untouched underneath.",
+          "features": [
+            {
+              "title": "Vocal size",
+              "body": "Formant shifting changes the apparent size of the throat and mouth without moving the pitch."
+            },
+            {
+              "title": "Resonance and texture",
+              "body": "Add body, brightness or a little grit until the character sits exactly where you want it."
+            },
+            {
+              "title": "A room of its own",
+              "body": "Set a short room and a room mix to put the voice in a believable space instead of a bare studio."
+            },
+            {
+              "title": "Controlled echo",
+              "body": "Echo and echo time add distance and drama without turning the take into a wash."
+            }
+          ],
+          "images": [
+            {
+              "file": "voice.png",
+              "label": "Voice",
+              "alt": "The Sonus.NET Voice stage with pitch, vocal size, resonance, brightness and texture controls",
+              "caption": "Voice. Pitch and vocal size are separate controls: one moves the note, the other moves the body."
+            },
+            {
+              "file": "space.png",
+              "label": "Space",
+              "alt": "The Sonus.NET Space stage with a room decay curve, room mix and echo time",
+              "caption": "Space. Room and echo have their own visual readout, separate from the voice character."
+            }
+          ]
+        },
+        {
+          "eyebrow": "05 / Monitoring, routing and takes",
+          "title": "Monitor.<br>Route. Record.",
+          "lede": "Monitoring, the virtual microphone and the recorder all consume the same processed signal, but they stay independent output paths. Set one up without disturbing the others.",
+          "features": [
+            {
+              "title": "Headphone monitoring",
+              "body": "Listen on the headphones you chose, at a level that stays separate from what goes to the virtual microphone."
+            },
+            {
+              "title": "Test the route",
+              "body": "A short chime confirms the headphone path before you go live, so silence is never a mystery."
+            },
+            {
+              "title": "Virtual microphone",
+              "body": "Enable the cable, choose CABLE Output in the other app, and the processed voice arrives there like a real microphone."
+            },
+            {
+              "title": "Real files",
+              "body": "Takes are ordinary 48 kHz WAV files in Documents\\Sonus Recordings; presets are readable JSON you can copy anywhere."
+            }
+          ],
+          "images": [
+            {
+              "file": "settings.png",
+              "label": "Devices",
+              "alt": "The Sonus.NET audio settings with microphone, headphones and virtual microphone routing",
+              "caption": "Settings. Pick the physical input, the headphones for monitoring and the virtual output in one place."
+            },
+            {
+              "file": "recording.png",
+              "label": "Takes",
+              "alt": "The Sonus.NET Takes panel with raw and processed recordings and playback transport",
+              "caption": "Takes. Select a recording, then switch between its RAW and PROCESSED versions instantly."
+            },
+            {
+              "file": "presets.png",
+              "label": "Presets",
+              "alt": "The Sonus.NET sound library with enhancement and character presets",
+              "caption": "The sound library. Start from a professional sound or a character preset, then make it yours."
+            }
+          ]
         }
       ]
     }

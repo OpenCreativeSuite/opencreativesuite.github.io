@@ -23,7 +23,7 @@ public sealed class AboutPage : Component
         ("Do you collect any data?",
             "No analytics, no telemetry, no account system, no phone-home. The apps work offline. Downloads come straight from GitHub Releases, which is the only third party involved."),
         ("Which platforms are supported?",
-            "Windows, macOS and Linux, with native builds for each. There is no web version and no mobile app. These are desktop tools built for real work."),
+            "Most apps ship for Windows, macOS and Linux with native builds for each. Sonus.NET is Windows-only because it routes audio through a Windows virtual device. There is no web version and no mobile app; these are desktop tools built for real work."),
         ("Can I contribute?",
             "Absolutely. The repos are public, the roadmap is public, and issues are triaged in the open. Start with a small bug, a docs fix or a reproduction case. All of it helps."),
         ("How do updates work?",

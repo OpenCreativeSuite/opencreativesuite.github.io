@@ -138,7 +138,7 @@ public sealed class ProductPage : Component<ProductPageProps>
                 "Free forever",
                 product.LicenseShort,
                 "No account",
-                "Windows / macOS / Linux",
+                string.Join(" / ", product.Platforms),
                 "Latest build from GitHub"
             ], "ticker ticker--accent"),
 
