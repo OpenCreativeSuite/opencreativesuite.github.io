@@ -21,6 +21,7 @@ await pruneCompressed(target);
 for (const name of [
     "dotnet.js",
     "content.json",
+    "global.json",
     "OpenCreativeSuite.runtimeconfig.json",
     "OpenCreativeSuite.staticwebassets.endpoints.json",
     "web.config"

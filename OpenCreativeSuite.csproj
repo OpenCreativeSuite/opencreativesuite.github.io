@@ -1,34 +1,52 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <!--
-    The framework checkout owns the platform wiring. This project only opts in
-    to the browser target and declares its content, assets and stylesheets.
+    Browser-only Donkeh application.
+
+    The Donkeh packages carry the host wiring (browser SDK imports, entry-point
+    generation, host page fallback, publish folder and flattening). There is no
+    local framework checkout or path-based import.
   -->
   <PropertyGroup>
-    <RuntimeIdentifiers Condition="'$(TargetFramework)' == ''">browser-wasm</RuntimeIdentifiers>
-    <DonkehVersion>1.0.44</DonkehVersion>
-    <TargetFrameworks>net10.0;net10.0-browser</TargetFrameworks>
-    <DonkehDesktop>false</DonkehDesktop>
-    <DonkehWeb>true</DonkehWeb>
-  </PropertyGroup>
-
-
-  <PropertyGroup>
     <OutputType>Exe</OutputType>
+    <TargetFrameworks>net10.0-browser</TargetFrameworks>
     <RootNamespace>OpenCreativeSuite</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <LangVersion>latest</LangVersion>
 
-    <!-- The app supplies its own Main so it can initialize site interop first. -->
+    <DonkehVersion>1.0.44</DonkehVersion>
+
+    <!-- Keep the site's custom Main so browser interop initializes first. -->
     <DonkehGenerateEntryPoint>false</DonkehGenerateEntryPoint>
+
+    <RuntimeIdentifiers Condition="'$(TargetFramework)' == ''">browser-wasm</RuntimeIdentifiers>
 
     <DefaultItemExcludes>$(DefaultItemExcludes);builds/**;docs/**</DefaultItemExcludes>
     <!-- The site is English-only and does not need ICU globalization data. -->
     <InvariantGlobalization>true</InvariantGlobalization>
-    <!-- Identifies this project to Directory.Build.targets. -->
-    <IsOpenCreativeSuite>true</IsOpenCreativeSuite>
   </PropertyGroup>
+
+  <ItemGroup>
+    <!--
+      Donkeh.Windowing supplies the buildTransitive host wiring. Its desktop
+      compile/runtime assets are not part of a browser build.
+    -->
+    <PackageReference Include="Donkeh.Windowing"
+                      Version="$(DonkehVersion)"
+                      ExcludeAssets="compile;runtime" />
+    <PackageReference Include="Donkeh.Windowing.Browser"
+                      Version="$(DonkehVersion)"
+                      Condition="'$(TargetFramework)' == 'net10.0-browser'" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly"
+                      Version="10.0.10"
+                      Condition="'$(TargetFramework)' == 'net10.0-browser'" />
+    <PackageReference Include="Microsoft.NET.Sdk.WebAssembly.Pack"
+                      Version="10.0.11"
+                      PrivateAssets="all"
+                      GeneratePathProperty="true"
+                      Condition="'$(TargetFramework)' == 'net10.0-browser'" />
+  </ItemGroup>
 
   <ItemGroup>
     <!-- Content and design system are embedded in the application assembly. -->
@@ -50,16 +68,4 @@
              CopyToPublishDirectory="PreserveNewest" />
   </ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Donkeh.Windowing" Version="$(DonkehVersion)" />
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="Donkeh.Windowing.Browser" Version="$(DonkehVersion)" Condition="'$(TargetFramework)' == 'net10.0-browser'" />
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="10.0.10" Condition="'$(TargetFramework)' == 'net10.0-browser'" />
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="Microsoft.NET.Sdk.WebAssembly.Pack" Version="10.0.11" Condition="'$(TargetFramework)' == 'net10.0-browser'" PrivateAssets="all" GeneratePathProperty="true" />
-  </ItemGroup>
 </Project>

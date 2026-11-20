@@ -3,7 +3,6 @@ node_modules/
 bin/
 obj/
 builds/
-.donkeh/
 .DS_Store
 Thumbs.db
 *.log

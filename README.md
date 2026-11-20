@@ -6,17 +6,10 @@ The site is a **Donkeh WebAssembly application**. It is built with real componen
 
 ## Requirements
 
-- **.NET SDK 10**.
-- A **Donkeh framework checkout** containing `Build/Donkeh.props` and `Build/Donkeh.targets`.
+- **.NET SDK 10** (`global.json` pins the SDK).
+- NuGet access to the published Donkeh packages (`Donkeh.Windowing` and `Donkeh.Windowing.Browser`).
 
-The project resolves the framework in this order:
-
-1. `-p:DonkehRoot=<path>` on the command line.
-2. The `DONKEH_ROOT` environment variable.
-3. A `Donkeh/` folder beside the project.
-4. The local checkout path used during development.
-
-`Directory.Build.props` contains the resolution rules. `Directory.Build.targets` imports the framework's host wiring. The framework owns the WebAssembly entry point, SDK imports, host page fallback and publish flattening.
+The project uses `Donkeh.Windowing` for the host wiring and `Donkeh.Windowing.Browser` for the browser runtime. No local framework checkout or path-based import is required.
 
 ## Build and preview
 
@@ -43,9 +36,8 @@ For GitHub Pages, the workflow builds into `builds/wasm`, copies that output int
 ## Project layout
 
 ```
-OpenCreativeSuite.csproj        Donkeh WebAssembly project
-Directory.Build.props           framework checkout resolution
-Directory.Build.targets         framework host wiring
+OpenCreativeSuite.csproj        Donkeh WebAssembly project (NuGet packages)
+global.json                     pins the .NET SDK
 Program.cs                      [AppRoot], page routes and browser entry point
 content.json                    single source of product/site content
 src/
@@ -142,7 +134,7 @@ Both stylesheets are embedded and declared with `[assembly: Stylesheet(...)]` in
 
 ## Browser interop
 
-The browser entry point in `Program.cs` is the one deliberate host-level customisation: it initializes `wwwroot/site-interop.js` before `DomHost.StartAsync`, then hands control to the framework host. Everything else — the SDK imports, host page fallback, entry-point target, publish folder and flattening — comes from `Donkeh.props`/`Donkeh.targets`.
+The browser entry point in `Program.cs` is the one deliberate host-level customisation: it initializes `wwwroot/site-interop.js` before `DomHost.StartAsync`, then hands control to the framework host. Everything else — the SDK imports, host page fallback, entry-point target, publish folder and flattening — comes from the published `Donkeh.Windowing` build targets.
 
 `wwwroot/site-interop.js` provides the small pieces the browser bridge does not yet expose:
 
@@ -173,7 +165,7 @@ The deployment workflow now publishes the Donkeh app into `docs/`, not the legac
 3. In **Settings → Pages → Build and deployment**, choose **Deploy from a branch**.
 4. Select the branch and the **`/docs`** folder.
 
-`.github/workflows/pages.yml` checks out the site and the Donkeh framework, publishes `net10.0-browser`, stages `builds/wasm` into `docs/`, and commits the result with `[skip ci]`. The workflow passes the framework checkout through `DONKEH_ROOT`, so it does not depend on the local Windows path.
+`.github/workflows/pages.yml` checks out the site, restores the published Donkeh packages, publishes `net10.0-browser`, stages `builds/wasm` into `docs/`, and commits the result with `[skip ci]`.
 
 `docs/.nojekyll` is published with the app, so GitHub Pages serves `_framework` files without Jekyll processing.
 
