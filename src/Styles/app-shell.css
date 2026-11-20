@@ -1,0 +1,101 @@
+/* ==========================================================================
+   OPEN CREATIVE SUITE / app-shell.css
+   Maps the static site's body-level rules onto the Donkeh application root.
+   The design system itself lives in assets/css/site.css.
+   ========================================================================== */
+
+.app-root {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--font-body);
+    font-size: clamp(16px, 1.05vw, 17.5px);
+    line-height: 1.55;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    overflow-x: clip;
+}
+
+.site-shell {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.site-shell > main {
+    flex: 1 0 auto;
+}
+
+.site-shell > .site-footer {
+    flex: none;
+}
+
+/* A product page tints the header rule and the page accents. */
+.site-shell.app-page .site-header::after {
+    opacity: 1;
+}
+
+/* The mobile menu replaces the page, so stop the document scrolling behind it. */
+.app-root:has(.menu.is-open) {
+    height: 100vh;
+    overflow: hidden;
+}
+
+body:has(.menu.is-open) {
+    overflow: hidden;
+}
+
+.app-root:has(.menu.is-open) .nav-toggle {
+    border-color: var(--paper);
+    color: var(--paper);
+    background: transparent;
+}
+
+.app-root:has(.menu.is-open) .site-header {
+    background: transparent;
+    border-color: transparent;
+    box-shadow: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+}
+
+.app-root:has(.menu.is-open) .site-header .brand {
+    color: var(--paper);
+}
+
+.app-root:has(.menu.is-open) .site-header .brand__mark {
+    background: var(--lime);
+    color: var(--ink);
+}
+
+.app-root:has(.menu.is-open) .site-header::after {
+    opacity: 0;
+}
+
+/* The framework Link component marks the current page with an `active` class. */
+.nav__link.active::after,
+.menu__link.active {
+    transform: scaleX(1);
+}
+
+/* Keep keyboard focus visible inside the dark menu and footer. */
+.app-root.menu-open :focus-visible,
+.site-footer :focus-visible {
+    outline-color: var(--lime);
+}
+
+/* The receipt is the visual centrepiece of the dark section. */
+.receipt-wrap {
+    justify-self: center;
+}
+
+/* A tiny amount of polish the WebAssembly host can apply without JS state. */
+.site-header.is-scrolled {
+    border-bottom-color: var(--line-strong);
+    box-shadow: 0 1px 0 var(--ink), 0 10px 30px rgba(12, 12, 13, 0.06);
+}
+
+/* Global img/svg/a/button rules from site.css already apply to the app root.
+   Do not re-declare them here: a more specific `.app-root a` rule would beat
+   component rules such as `.btn { color: var(--btn-fg) }`. */

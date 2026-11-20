@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Open Creative Suite</title>
+    <script>
+        // GitHub Pages serves this file for app routes that have no physical
+        // document. Remember the requested path and let the WebAssembly host
+        // render it. The app removes .html and trailing slashes before routing.
+        (function () {
+            var path = location.pathname
+                .replace(/\/index\.html$/i, "/")
+                .replace(/\.html$/i, "");
+
+            if (path.charAt(0) !== "/") path = "/" + path;
+            path = path.replace(/\/+/g, "/");
+
+            if (path.length > 1 && path.charAt(path.length - 1) === "/") {
+                path = path.slice(0, -1);
+            }
+
+            try {
+                sessionStorage.setItem("ocs:redirect", path || "/");
+            } catch (error) {
+                // Storage may be disabled; the home page still loads.
+            }
+
+            location.replace("/");
+        })();
+    </script>
+    <noscript>
+        <meta http-equiv="refresh" content="0; url=/" />
+    </noscript>
+</head>
+
+<body style="margin:0;min-height:100vh;display:grid;place-items:center;background:#f3f0e6;color:#0c0c0d;font-family:'IBM Plex Mono',Consolas,monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase">
+    <p>Loading Open Creative Suite</p>
+</body>
+
+</html>

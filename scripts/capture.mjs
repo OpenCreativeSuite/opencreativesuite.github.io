@@ -115,6 +115,19 @@ try {
   const loaded = cdp.once("Page.loadEventFired");
   await cdp.send("Page.navigate", { url });
   await Promise.race([loaded, delay(15000)]);
+
+  // The Donkeh host mounts after the WebAssembly runtime starts. Wait for the
+  // application root before measuring, scrolling or capturing.
+  for (let attempt = 0; attempt < 120; attempt += 1) {
+    const ready = await cdp.send("Runtime.evaluate", {
+      expression: "!!document.querySelector('.app-root')",
+      returnByValue: true
+    });
+
+    if (ready.result.value) break;
+    await delay(250);
+  }
+
   await cdp.send("Runtime.evaluate", {
     expression: "document.fonts.ready.then(() => true)",
     awaitPromise: true

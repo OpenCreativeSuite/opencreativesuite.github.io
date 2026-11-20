@@ -1,7 +1,14 @@
 _site/
 node_modules/
+bin/
+obj/
+builds/
+.donkeh/
 .DS_Store
 Thumbs.db
 *.log
 .idea/*
 .idea
+bin
+obj
+builds

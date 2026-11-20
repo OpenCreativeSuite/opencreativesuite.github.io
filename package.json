@@ -1,12 +1,15 @@
 {
   "name": "open-creative-suite-site",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "private": true,
-  "description": "Static product site for the Open Creative Suite.",
+  "description": "Donkeh WebAssembly product site for the Open Creative Suite.",
   "type": "module",
   "scripts": {
-    "build": "node scripts/build.mjs",
-    "serve": "node scripts/serve.mjs",
+    "build": "dotnet publish OpenCreativeSuite.csproj -c Release -f net10.0-browser",
+    "build:docs": "dotnet publish OpenCreativeSuite.csproj -c Release -f net10.0-browser && node scripts/stage-docs.mjs",
+    "serve": "node scripts/serve-wasm.mjs",
+    "build:static": "node scripts/build.mjs",
+    "serve:static": "node scripts/serve.mjs",
     "check": "node scripts/check-links.mjs"
   }
 }

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#f3f0e6"/>
+  <rect x="0" y="0" width="1200" height="14" fill="#0c0c0d"/>
+  <rect x="0" y="616" width="1200" height="14" fill="#0c0c0d"/>
+
+  <g font-family="Archivo, Arial Black, Helvetica, sans-serif" font-weight="900" letter-spacing="-7">
+    <text x="58" y="212" font-size="124" fill="#0c0c0d">OPEN</text>
+    <rect x="52" y="240" width="612" height="126" fill="#ccff00"/>
+    <text x="58" y="342" font-size="124" fill="#0c0c0d">CREATIVE</text>
+    <text x="58" y="472" font-size="124" fill="none" stroke="#0c0c0d" stroke-width="2">SUITE</text>
+  </g>
+
+  <g font-family="IBM Plex Mono, monospace" font-size="19" letter-spacing="2" fill="#0c0c0d">
+    <text x="60" y="536">CREATIVE TOOLS · $0 · SOURCE-AVAILABLE</text>
+    <text x="60" y="568" fill="#5f5f5c">WINDOWS / MACOS / LINUX · FREE FOREVER</text>
+  </g>
+
+  <g transform="translate(860 92)">
+    <g>
+      <rect width="132" height="132" fill="#ff2d87"/>
+      <rect x="146" width="132" height="132" fill="#8a5cff"/>
+    </g>
+    <g transform="translate(0 146)">
+      <rect width="132" height="132" fill="#ff5a1f"/>
+      <rect x="146" width="132" height="132" fill="#00c2ff"/>
+    </g>
+    <g transform="translate(0 292)">
+      <rect width="132" height="132" fill="#c8ff00"/>
+      <rect x="146" width="132" height="132" fill="#ffc800"/>
+    </g>
+  </g>
+
+  <g transform="rotate(-5 986 500)">
+    <rect x="830" y="462" width="300" height="70" fill="#ff2d87" stroke="#0c0c0d" stroke-width="3"/>
+    <text x="980" y="508" text-anchor="middle" font-family="Archivo, Arial Black, sans-serif" font-weight="900" font-size="28" letter-spacing="-1" fill="#0c0c0d">FREE FOREVER</text>
+  </g>
+
+  <rect x="1088" y="40" width="60" height="60" fill="#0c0c0d"/>
+  <text x="1118" y="77" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="16" font-weight="500" letter-spacing="1" fill="#ccff00">OCS</text>
+</svg>

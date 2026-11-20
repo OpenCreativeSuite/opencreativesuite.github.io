@@ -1,0 +1,4 @@
+<Project>
+  <!-- Framework-owned host wiring. DonkehRoot is resolved in Directory.Build.props. -->
+  <Import Project="$(DonkehRoot)\Build\Donkeh.targets" />
+</Project>
